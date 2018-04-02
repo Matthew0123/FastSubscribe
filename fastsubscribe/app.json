@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/contentlist/contentlist",
+    "pages/webview/webview"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "信息快订",
+    "navigationBarTextStyle":"black"
+  }
+}
