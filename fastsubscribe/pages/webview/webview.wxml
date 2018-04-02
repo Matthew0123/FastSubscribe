@@ -1,7 +1,0 @@
-<view class="container">
-  <view class="page-body">
-    <view class='page-section'>
-    <web-view src="{{link}}"></web-view>
-    </view>
-  </view>
-</view>
