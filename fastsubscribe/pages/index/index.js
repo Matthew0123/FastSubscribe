@@ -34,6 +34,33 @@ function getInfo(openId,that)
 }
 
 Page({
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '信息快订',
+      path: '/pages/index/index',
+      success: function (res) {
+        // 转发成功
+        var shareTickets = res.shareTickets;
+        if (shareTickets.length == 0) {
+          return false;
+        }
+        wx.getShareInfo({
+          shareTicket: shareTickets[0],
+          success: function (res) {
+            var encryptedData = res.encryptedData;
+            var iv = res.iv;
+          }
+        })
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  },
   data: {
     userInfo: {},
     hasUserInfo: false,
@@ -46,8 +73,10 @@ Page({
     subscribe:4
   },
   onLoad: function () {
-    
-    var that = this
+    wx.showShareMenu({
+      withShareTicket: true
+    });
+    var that = this;
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function (userInfo,openId) {
       getInfo(app.globalData.openId, that);
