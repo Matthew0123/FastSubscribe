@@ -21,3 +21,11 @@
   margin: 10rpx;
   border-radius: 50%;
 }
+.cell-height{
+  height:2.58823529em;
+}
+.email-input{height:2.38823529em;min-height:2.38823529em;line-height:2.38823529em}
+/* 无效邮箱样式 */
+.email-input.error {
+    border: 2rpx solid red;
+}
