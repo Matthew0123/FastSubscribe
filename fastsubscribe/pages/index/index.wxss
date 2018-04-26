@@ -29,3 +29,8 @@
 .email-input.error {
     border: 2rpx solid red;
 }
+
+.comment-color {
+  color: #2828FF;
+  font-weight:bold
+}

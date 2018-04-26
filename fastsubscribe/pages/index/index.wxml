@@ -6,7 +6,7 @@
       <view class="userinfo">
         <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"                   background-size="cover"></image>
         <text class="view-color">{{userInfo.nickName}}</text>
-        <text>创建属于你自己的资讯提醒</text>
+        <text class='comment-color'>创建属于你自己的资讯提醒</text>
       </view>
     
     <form bindsubmit="formSubmit">
